@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Versão em português da página do estúdio (docs/index-pt.html).
+
+	Este arquivo é uma cópia completa de data.xml com os textos traduzidos.
+	presskit() NÃO faz merge com o data.xml em inglês: se um campo faltar aqui,
+	ele simplesmente não aparece na página em português. Ao editar data.xml,
+	edite este arquivo também.
+
+	Links vão SEM o esquema ("store.steampowered.com/..."), nunca "https://...".
+-->
+
+<game>
+	<title>vkaike2</title>
+	<founding-date>11 de outubro de 2024</founding-date>
+	<website label="Página na Steam">store.steampowered.com/app/3524950/The_Last_Good_Boy/</website>
+	<based-in>Copenhague, Dinamarca</based-in>
+
+	<press-contact>vkaike9@gmail.com</press-contact>
+
+	<phone></phone>
+
+	<socials>
+		<social>
+			<name>Steam</name>
+			<link>store.steampowered.com/app/3524950/The_Last_Good_Boy/</link>
+		</social>
+		<social>
+			<name>YouTube</name>
+			<link>youtube.com/@vkaike2</link>
+		</social>
+		<social>
+			<name>Discord</name>
+			<link>discord.gg/bTD965fGjY</link>
+		</social>
+	</socials>
+
+	<description>
+		Sou um desenvolvedor brasileiro que mora em Copenhague, na Dinamarca, e faço os jogos que eu gostaria de jogar. O primeiro deles é o The Last Good Boy, que é sobre o meu shih-tzu, o Ramon. Espero que vocês gostem.
+	</description>
+
+	<histories>
+		<history>
+			<header>Por que esse nome?</header>
+			<text>Eu sempre usei o nick "vkaike" nos jogos, já que o meu nome é Victor Kaike. Porém, uma vez eu perdi a senha dessa conta e criei outra chamada "vkaike2", e acabei achando interessante a sonoridade, principalmente porque a sigla "vk2" em inglês fica parecida com "Pikachu".</text>
+		</history>
+		<history>
+			<header>Por que fazer jogos?</header>
+			<text>Eu passei grande parte da minha infância e adolescência jogando no Super Nintendo e nos primeiros MMOs, e entendo o tanto de emoção que um jogo pode causar em uma pessoa. Lembro da irritação de não conseguir passar de um determinado chefe, e da alegria que sentia quando finalmente conseguia um item, depois de passar uma semana toda farmando.</text>
+		</history>
+		<history>
+			<!-- Header vazio de propósito: presskit() imprime <strong></strong> antes do
+			     <p>, então este bloco continua o tópico acima como um segundo parágrafo,
+			     sem criar um novo título. -->
+			<header></header>
+			<text>Depois de jogar tantos jogos, eu comecei a me interessar mais em entender por que o desenvolvedor tomou uma decisão X ao invés de uma decisão Y. Às vezes ficava pensando a noite toda sobre isso, quase como se fosse uma conversa com o game designer. Depois de anos pensando sobre isso, eu comecei a ter muita vontade de criar o meu próprio jogo. E como eu sempre gostei de desenhar e de tocar violão (apesar de não tocar há muito tempo) e escolhi ser desenvolvedor de software como profissão, a opção mais óbvia foi começar a desenvolver os meus jogos.</text>
+		</history>
+	</histories>
+
+	<trailers>
+		<trailer>
+			<name>The Last Good Boy | Trailer de Lançamento 2026</name>
+			<youtube>EsSVXPXG_d8</youtube>
+		</trailer>
+	</trailers>
+
+	<awards></awards>
+
+	<quotes></quotes>
+
+	<press-can-request-copy>TRUE</press-can-request-copy>
+	<monetization-permission>monetize</monetization-permission>
+
+	<additionals></additionals>
+
+	<credits>
+		<credit>
+			<person>Victor Kaike</person>
+			<role>Desenvolvedor</role>
+		</credit>
+	</credits>
+
+	<contacts>
+		<contact>
+			<name>Contato</name>
+			<mail>vkaike9@gmail.com</mail>
+		</contact>
+		<contact>
+			<name>Steam</name>
+			<link label="Página na Steam">store.steampowered.com/app/3524950/The_Last_Good_Boy/</link>
+		</contact>
+		<contact>
+			<name>YouTube</name>
+			<link label="youtube.com/@vkaike2">youtube.com/@vkaike2</link>
+		</contact>
+		<contact>
+			<name>Discord</name>
+			<link label="Entre no servidor">discord.gg/bTD965fGjY</link>
+		</contact>
+	</contacts>
+</game>

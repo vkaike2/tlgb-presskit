@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Versão em português da página do jogo (docs/the_last_good_boy-pt.html).
+	Cópia completa de data.xml com os textos traduzidos — veja a nota em
+	src/data-pt.xml sobre manter os dois arquivos em sincronia.
+-->
+
+<game>
+	<title>The Last Good Boy</title>
+	<release-date>4 de setembro de 2026</release-date>
+	<website label="Página na Steam">store.steampowered.com/app/3524950/The_Last_Good_Boy/</website>
+	<press-can-request-copy>TRUE</press-can-request-copy>
+
+	<platforms>
+		<platform>
+			<name>PC (Windows)</name>
+			<link>store.steampowered.com/app/3524950/The_Last_Good_Boy/</link>
+		</platform>
+		<platform>
+			<name>Steam</name>
+			<link>store.steampowered.com/app/3524950/The_Last_Good_Boy/</link>
+		</platform>
+		<platform>
+			<name>Demo gratuita na Steam</name>
+			<link>store.steampowered.com/app/3900680/</link>
+		</platform>
+	</platforms>
+
+	<prices>
+		<price>
+			<currency>USD</currency>
+			<value>$5.00</value>
+		</price>
+	</prices>
+
+	<description>
+		O melhor Idle RPG inspirado em um cachorro chamado Ramon! Agora, falando sério, você controla um shih-tzu marrom chamado Ramon e o seu objetivo é encontrar os seus amigos, mas essa tarefa não será fácil. Primeiro você precisa se preparar coletando recursos, desbloqueando o mapa, enfrentando monstros e sendo o melhor cachorro do mundo!
+	</description>
+
+	<!-- Dois parágrafos, cada um em seu próprio bloco com <header> vazio. O campo
+	     <history> (singular) renderiza tudo em um único <p>, então as quebras de
+	     parágrafo se perderiam se os dois textos ficassem juntos nele. -->
+	<histories>
+		<history>
+			<header></header>
+			<text>Tudo começou quando eu comecei a analisar a vida do Ramon (meu cachorro) e percebi que ela era bem parecida com um RPG. Deixa eu te dar uns exemplos. Ele tem vários brinquedos e brinca de uma maneira diferente dependendo do brinquedo, o que poderia ser facilmente adaptado pra armas. Ele também tem várias roupinhas (e fica muito bonitinho usando elas, inclusive), e elas podem ser as armaduras. Além disso, ele possui uma daily quest, onde eu tenho que levar ele pra passear todos os dias!</text>
+		</history>
+		<history>
+			<header></header>
+			<text>Junto com isso, eu sempre tive vontade de que ele fosse imortalizado, já que infelizmente os cachorros vivem menos que nós :(. Então a escolha mais óbvia foi fazer um jogo inspirado nele. E como eu estava assistindo "The Last of Us", eu pensei: e se eu criasse o "The Last Good Boy"? E aí o próximo passo foi criar a história por trás desse nome.</text>
+		</history>
+	</histories>
+
+	<features>
+		<feature>Entre 30 e 40 horas de jogo</feature>
+		<feature>133 itens para coletar</feature>
+		<feature>12 monstros para derrotar</feature>
+		<feature>3 chefes para enfrentar</feature>
+		<feature>13 recursos diferentes para coletar</feature>
+		<feature>Os equipamentos aparecem no personagem!</feature>
+		<feature>Sistema de encantamento de itens, para otimizar o seu personagem</feature>
+		<feature>Totalmente localizado em 9 idiomas, incluindo português do Brasil, japonês e chinês simplificado</feature>
+	</features>
+
+	<trailers>
+		<trailer>
+			<name>Trailer de Lançamento 2026</name>
+			<youtube>EsSVXPXG_d8</youtube>
+		</trailer>
+	</trailers>
+
+	<awards></awards>
+
+	<quotes></quotes>
+
+	<additionals>
+		<additional>
+			<title>Demo gratuita</title>
+			<description>Uma demo jogável está disponível na Steam em</description>
+			<link>store.steampowered.com/app/3900680/</link>
+		</additional>
+	</additionals>
+
+	<credits>
+		<credit>
+			<person>Victor Kaike</person>
+			<role>Design, Programação &amp; Arte</role>
+		</credit>
+		<credit>
+			<person>Ramon</person>
+			<role>The Last Good Boy</role>
+		</credit>
+	</credits>
+</game>

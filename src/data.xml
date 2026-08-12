@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Company / studio page. Rendered by index.php into docs/index.html.
+
+	IMPORTANT: write links WITHOUT a scheme ("store.steampowered.com/app/..."),
+	not "https://..." — presskit() prepends https:// itself and you get
+	"https://http://..." if you include it.
+
+	Lines marked TODO are placeholders that still need your real details.
+-->
+
+<game>
+	<title>vkaike2</title>
+	<!-- Written out in full because "11/10/2024" reads as 11 October to a
+	     Brazilian and 10 November to an American. Swap if I guessed wrong. -->
+	<founding-date>11 October, 2024</founding-date>
+	<website label="Steam page">store.steampowered.com/app/3524950/The_Last_Good_Boy/</website> <!-- TODO: studio site, if you have one -->
+	<based-in>Copenhagen, Denmark</based-in>
+
+	<press-contact>vkaike9@gmail.com</press-contact>
+
+	<!-- Leave empty rather than deleting: presskit() prints the literal text
+	     COMPANY_PHONE on the page if this tag is absent entirely. -->
+	<phone></phone>
+
+	<socials>
+		<social>
+			<name>Steam</name>
+			<link>store.steampowered.com/app/3524950/The_Last_Good_Boy/</link>
+		</social>
+		<social>
+			<name>YouTube</name>
+			<link>youtube.com/@vkaike2</link>
+		</social>
+		<social>
+			<name>Discord</name>
+			<link>discord.gg/bTD965fGjY</link>
+		</social>
+	</socials>
+
+	<description>
+		I'm a Brazilian developer living in Copenhagen, Denmark, and I make the games I'd like to play. The first of them is The Last Good Boy, which is about my Shih Tzu, Ramon. I hope you enjoy it.
+	</description>
+
+	<histories>
+		<history>
+			<header>Why this name?</header>
+			<text>I always used the nick "vkaike" in games, since my name is Victor Kaike. But I lost the password to that account once and created another one called "vkaike2", and I ended up liking the way it sounded, mostly because the abbreviation "vk2" in English comes out sounding like "Pikachu".</text>
+		</history>
+		<history>
+			<header>Why make games?</header>
+			<text>I spent a big part of my childhood and teenage years playing on the Super Nintendo and the early MMOs, and I understand how much emotion a game can stir in a person. I remember the frustration of not getting past a certain boss, and the joy I felt when I finally got an item, after spending a whole week farming.</text>
+		</history>
+		<history>
+			<!-- Header intentionally empty: presskit() prints <strong></strong> before the
+			     <p>, so this block continues the topic above as a second paragraph
+			     without starting a new heading. -->
+			<header></header>
+			<text>After playing so many games, I started getting more interested in understanding why the developer made decision X instead of decision Y. Sometimes I would spend the whole night thinking about it, almost as if it were a conversation with the game designer. After years of thinking about that, I started really wanting to create my own game. And since I have always liked drawing and playing the guitar (even though I have not played in a long time) and I chose software development as my profession, the most obvious option was to start developing my games.</text>
+		</history>
+	</histories>
+
+	<trailers>
+		<trailer>
+			<name>The Last Good Boy | Release Trailer 2026</name>
+			<youtube>EsSVXPXG_d8</youtube>
+		</trailer>
+	</trailers>
+
+	<awards></awards>
+
+	<quotes></quotes>
+
+	<press-can-request-copy>TRUE</press-can-request-copy>
+	<monetization-permission>monetize</monetization-permission>
+
+	<additionals></additionals>
+
+	<credits>
+		<credit>
+			<person>Victor Kaike</person> <!-- taken from this repo's git config — correct it if you prefer another byline -->
+			<role>Developer</role>
+		</credit>
+	</credits>
+
+	<contacts>
+		<contact>
+			<name>Inquiries</name>
+			<mail>vkaike9@gmail.com</mail>
+		</contact>
+		<contact>
+			<name>Steam</name>
+			<link label="Steam page">store.steampowered.com/app/3524950/The_Last_Good_Boy/</link>
+		</contact>
+		<contact>
+			<name>YouTube</name>
+			<link label="youtube.com/@vkaike2">youtube.com/@vkaike2</link>
+		</contact>
+		<contact>
+			<name>Discord</name>
+			<link label="Join the server">discord.gg/bTD965fGjY</link>
+		</contact>
+	</contacts>
+</game>

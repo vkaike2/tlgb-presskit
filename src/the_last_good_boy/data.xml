@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Game page for The Last Good Boy. Rendered into docs/thelastgoodboy.html.
+	Facts below come from the Steam store page for app 3524950.
+
+	Links go in WITHOUT a scheme — presskit() prepends https:// itself.
+-->
+
+<game>
+	<title>The Last Good Boy</title>
+	<release-date>4 September, 2026</release-date>
+	<website label="Steam page">store.steampowered.com/app/3524950/The_Last_Good_Boy/</website>
+	<press-can-request-copy>TRUE</press-can-request-copy>
+
+	<platforms>
+		<platform>
+			<name>PC (Windows)</name>
+			<link>store.steampowered.com/app/3524950/The_Last_Good_Boy/</link>
+		</platform>
+		<platform>
+			<name>Steam</name>
+			<link>store.steampowered.com/app/3524950/The_Last_Good_Boy/</link>
+		</platform>
+		<platform>
+			<name>Free Demo on Steam</name>
+			<link>store.steampowered.com/app/3900680/</link>
+		</platform>
+	</platforms>
+
+	<prices>
+		<!-- Steam applies its own regional conversions; USD is the reference price. -->
+		<price>
+			<currency>USD</currency>
+			<value>$5.00</value>
+		</price>
+	</prices>
+
+	<description>
+		The best Idle RPG inspired by a dog named Ramon! Now, seriously, you play as a brown shih tzu called Ramon, and your goal is to find his friends, but that task will not be easy. First you need to get ready by gathering resources, unlocking the map, fighting monsters and being the best dog in the world!
+	</description>
+
+	<!-- Two paragraphs, each its own block with an empty <header>. The singular
+	     <history> field renders everything into one <p>, so paragraph breaks would
+	     be lost if both texts sat inside it. -->
+	<histories>
+		<history>
+			<header></header>
+			<text>It all started when I began looking at Ramon's life (my dog) and realised it was a lot like an RPG. Let me give you some examples. He has several toys and he plays differently depending on the toy, which could easily be adapted into weapons. He also has several little outfits (and he looks very cute wearing them, by the way), and those could be the armour. On top of that, he has a daily quest, where I have to take him out for a walk every day!</text>
+		</history>
+		<history>
+			<header></header>
+			<text>Along with that, I always wanted him to be immortalised, since dogs unfortunately live shorter lives than we do :(. So the most obvious choice was to make a game inspired by him. And since I was watching "The Last of Us" at the time, I thought: what if I made "The Last Good Boy"? And then the next step was creating the story behind that name.</text>
+		</history>
+	</histories>
+
+	<features>
+		<feature>Between 30 and 40 hours of gameplay</feature>
+		<feature>133 items to collect</feature>
+		<feature>12 monsters to defeat</feature>
+		<feature>3 bosses to face</feature>
+		<feature>13 different resources to gather</feature>
+		<feature>Equipment shows up on your character!</feature>
+		<feature>Item enchantment system, to optimise your character</feature>
+		<feature>Fully localised in 9 languages, including Brazilian Portuguese, Japanese and Simplified Chinese</feature>
+	</features>
+
+	<trailers>
+		<trailer>
+			<name>Release Trailer 2026</name>
+			<youtube>EsSVXPXG_d8</youtube>
+		</trailer>
+	</trailers>
+
+	<awards></awards>
+
+	<quotes></quotes>
+
+	<additionals>
+		<additional>
+			<title>Free Demo</title>
+			<description>A playable demo is available on Steam at</description>
+			<link>store.steampowered.com/app/3900680/</link>
+		</additional>
+	</additionals>
+
+	<credits>
+		<credit>
+			<person>Victor Kaike</person>
+			<role>Design, Programming &amp; Art</role>
+		</credit>
+		<credit>
+			<person>Ramon</person>
+			<role>The Last Good Boy</role>
+		</credit>
+	</credits>
+</game>
