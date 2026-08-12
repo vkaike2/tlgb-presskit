@@ -37,17 +37,67 @@ is both the URL and the display label, with underscores turned into spaces — h
 
 ## Editing and building
 
-1. Edit the `data.xml` files in `src/`.
-2. Run the build:
+1. Edit the `data.xml` files in `src/`, or add images under `src/<game>/images/`.
+2. Rebuild:
    ```
    node tools/build.mjs
    ```
-3. Preview `docs/index.html` in a browser, then commit both `src/` and `docs/`.
+   The first run on a new machine downloads a portable PHP 7.4 into `tools/php/`
+   (~25MB, gitignored). Later runs take about a second.
+3. Preview it locally. Either open `docs/index.html` straight from disk, or serve the folder
+   so CDN assets and the YouTube embed behave exactly as they will live:
+   ```
+   tools/php/php.exe -S 127.0.0.1:8080 -t docs
+   ```
+   then visit <http://127.0.0.1:8080/>.
+4. Commit **both** `src/` and `docs/`.
+
+### Always rebuild before committing
+
+`docs/` is generated output that is committed to the repository, because that is what GitHub
+Pages serves. Nothing rebuilds it on push. **Editing a `data.xml` and committing without
+running the build leaves the live site showing the old text** — the change is in the repo but
+not on the page.
+
+The build is deterministic: same inputs produce byte-identical output, so rebuilding never
+adds noise to a diff. If `git status` is clean after a build, `docs/` was already current.
+
+The build also empties `docs/` before writing, so deleting an image from `src/` really does
+remove it from the published site rather than leaving an orphan behind.
 
 ## Publishing to GitHub Pages
 
-In the repository's **Settings → Pages**, set the source to **Deploy from a branch**, branch
-`main`, folder `/docs`. Every push that includes a rebuilt `docs/` updates the live page.
+**One-time setup.** In the repository's **Settings → Pages**, set:
+
+| Field | Value |
+|---|---|
+| Source | Deploy from a branch |
+| Branch | `main` |
+| Folder | `/docs` |
+
+Save, and the first build takes a minute or two. The site is then live at
+<https://vkaike2.github.io/tlgb-presskit/>.
+
+**After that**, publishing is just `node tools/build.mjs` → commit → push. Every push that
+includes a rebuilt `docs/` updates the live pages within a minute.
+
+`docs/.nojekyll` must stay in the repository. Without it GitHub runs the output through
+Jekyll, which has its own rules about files and folders and can drop things unexpectedly.
+
+Direct links, once live:
+
+| Page | URL |
+|---|---|
+| Studio (English) | `/tlgb-presskit/` |
+| Studio (Português) | `/tlgb-presskit/index-pt.html` |
+| Game (English) | `/tlgb-presskit/the_last_good_boy.html` |
+| Game (Português) | `/tlgb-presskit/the_last_good_boy-pt.html` |
+
+## What must never be committed
+
+`tools/php/` is a 68MB portable PHP install that `tools/build.mjs` downloads on demand. It is
+listed in `.gitignore`; leave it there. Anyone cloning this repository gets it automatically on
+their first build.
 
 ## Languages
 

@@ -440,8 +440,7 @@ echo '					<li><a href="#factsheet">'. tl('Factsheet') .'</a></li>
 						<li><a href="#elements">'. tl('Elements') .'</a></li>
 						<li><a href="#logo">'. tl('Logo & Icon') .'</a></li>';
 if( $monetize >= 1) { echo '<li><a href="#monetize">'. tl('Monetization Permission') .'</a></li>'; }
-echo '						<li><a href="#links">'. tl('Additional Links') .'</a></li>
-						<li><a href="#credits">'. tl('Team') .'</a></li>
+echo '						<li><a href="#credits">'. tl('Team') .'</a></li>
 						<li><a href="#contact">'. tl('Contact') .'</a></li>
 					</ul>
 				</div>
@@ -807,31 +806,10 @@ if( $monetize >= 1 )
 }
 
 
-echo '					<h2 id="links">'. tl('Additional Links'). '</h2>';
-		
-for( $i = 0; $i < count($additionals); $i++ )
-{
-	$title = $description = $link = "";
-	foreach( $additionals[$i]['additional']->children() as $child )
-	{
-		if( $child->getName() == "title" ) {
-			$title = $child;
-		} else if( $child->getName() == "description" ) {
-			$description = $child;
-		} else if( $child->getName() == "link" ) {
-			$link = $child;
-		}
-	}
-
-	if( strpos(parseLink($link),'/') !== 0 ) {
-		$linkTitle = substr(parseLink($link),0,strpos(parseLink($link),'/'));
-	} else { $linkTitle = $link; }
-	
-	echo '<p>
-	<strong>'.$title.'</strong><br/>
-	'.$description.' <a href="https://'.parseLink($link).'" alt="'.parseLink($link).'">'.$linkTitle.'</a>.
-</p>';
-}
+// LOCAL CHANGE: the "Additional Links" section was removed at Victor's request.
+// Its only entry was the free demo, which the Platforms row in the factsheet
+// already links to. The <additionals> data is still parsed, so restoring this
+// block is enough to bring the section back.
 
 // LOCAL CHANGE: the "About <company>" section was removed at Victor's request. It
 // held the studio boilerplate and a "More information" link back to the studio
