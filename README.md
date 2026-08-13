@@ -146,14 +146,14 @@ sidebar column and collided with the content next to it. With a label you contro
 The attribute is honoured on `<website>` and on `<link>` inside `<contacts>` — those are the
 only two places upstream uses the URL as its own link text. It is deliberately *not* read
 elsewhere: `<platform>` and `<social>` already display their `<name>`, and `<additional>`
-shortens the URL to just the host. Omit the attribute and you get the old behaviour.
+shortens the URL to just the host. Omit the attribute and you get the old behavior.
 
 `style.css` also carries an `overflow-wrap: break-word` rule as a safety net, so any link that
 still shows a raw URL wraps instead of overflowing.
 
 ## Content gotchas
 
-These are presskit() behaviours that silently produce wrong output:
+These are presskit() behaviors that silently produce wrong output:
 
 - **Links must not include a scheme.** Write `store.steampowered.com/app/3524950/`, not
   `https://store.steampowered.com/…`. presskit() prepends `https://` itself, so a full URL
