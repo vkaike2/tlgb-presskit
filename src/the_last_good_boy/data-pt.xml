@@ -28,22 +28,28 @@
 
 	<prices>
 		<price>
-			<currency>USD</currency>
-			<value>$5.00</value>
+			<currency>BRL</currency>
+			<value>R$ 15,00</value>
 		</price>
 	</prices>
 
 	<description>
-		O melhor Idle RPG inspirado em um cachorro chamado Ramon! Agora, falando sério, você controla um shih-tzu marrom chamado Ramon e o seu objetivo é encontrar os seus amigos, mas essa tarefa não será fácil. Primeiro você precisa se preparar coletando recursos, desbloqueando o mapa, enfrentando monstros e sendo o melhor cachorro do mundo!
+		O melhor Idle RPG inspirado em um cachorro chamado Ramon do Mundo! Agora falando sério, você controla um shih-tzu marrom chamado Ramon e seu objetivo é encontrar seus amigos, mas essa tarefa não será fácil. Primeiro você precisa se preparar, coletando recursos para desbloquear o mapa, enfrentando monstros e pegando suas recompensas, e finalmente encontrando todos eles, provando que você é o melhor cachorro do mundo!
 	</description>
 
-	<!-- Dois parágrafos, cada um em seu próprio bloco com <header> vazio. O campo
-	     <history> (singular) renderiza tudo em um único <p>, então as quebras de
-	     parágrafo se perderiam se os dois textos ficassem juntos nele. -->
+	<!-- Um bloco por parágrafo, cada um com <header> vazio: presskit() renderiza
+	     cada <history> em seu próprio <p>, e uma quebra de linha dentro de um
+	     <text> viraria apenas um espaço. O primeiro parágrafo do Victor termina
+	     em "exemplos:" e continua na linha seguinte, então ele ocupa dois blocos
+	     (1 e 2) para que essa quebra apareça na página. -->
 	<histories>
 		<history>
 			<header></header>
-			<text>Tudo começou quando eu comecei a analisar a vida do Ramon (meu cachorro) e percebi que ela era bem parecida com um RPG. Deixa eu te dar uns exemplos. Ele tem vários brinquedos e brinca de uma maneira diferente dependendo do brinquedo, o que poderia ser facilmente adaptado pra armas. Ele também tem várias roupinhas (e fica muito bonitinho usando elas, inclusive), e elas podem ser as armaduras. Além disso, ele possui uma daily quest, onde eu tenho que levar ele pra passear todos os dias!</text>
+			<text>Tudo começou quando analisei a vida do Ramon (meu cachorro) e percebi que ela era bem parecida com um RPG. Deixa eu te dar uns exemplos:</text>
+		</history>
+		<history>
+			<header></header>
+			<text>Ele tem vários brinquedos e brinca de uma maneira diferente dependendo do brinquedo, o que poderia ser facilmente adaptado para armas. Ele também tem várias roupinhas que nós compramos para o frio, que poderiam ser as armaduras. Além disso, ele tem uma daily quest: levar ele para passear todos os dias!</text>
 		</history>
 		<history>
 			<header></header>

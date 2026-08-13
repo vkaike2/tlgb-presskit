@@ -18,6 +18,12 @@
 			<base>History</base>
 			<local>History</local>
 		</translation>
+		<!-- LOCAL CHANGE: game-page-only heading. The studio page keeps "History"
+		     above, since its section is about the studio rather than the game. -->
+		<translation>
+			<base>Why did I make this game?</base>
+			<local>Why did I make this game?</local>
+		</translation>
 		<translation>
 			<base>Projects</base>
 			<local>Projects</local>

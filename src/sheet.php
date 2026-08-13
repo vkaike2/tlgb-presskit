@@ -432,7 +432,7 @@ if (count(TranslateTool::getLanguages()) > 1) {
 		
 echo '					<li><a href="#factsheet">'. tl('Factsheet') .'</a></li>
 						<li><a href="#description">'. tl('Description') .'</a></li>
-						<li><a href="#history">'. tl('History') .'</a></li>
+						<li><a href="#history">'. tl('Why did I make this game?') .'</a></li>
 						<li><a href="#projects">'. tl('Projects') .'</a></li>
 						<li><a href="#trailers">'. tl('Videos') .'</a></li>
 						<li><a href="#images">'. tl('Images') .'</a></li>
@@ -517,7 +517,11 @@ echo'							</p>
 						<div class="uk-width-medium-4-6">
 							<h2 id="description">'. tl('Description'). '</h2>
 							<p>'. GAME_DESCRIPTION .'</p>
-							<h2 id="history">'. tl('History'). '</h2>';
+							<h2 id="history">'. tl('Why did I make this game?'). '</h2>';
+// LOCAL CHANGE (above, and in the nav list): upstream used tl('History') here, the
+// same string index.php prints. The game page now has its own key so it can be
+// retitled without renaming the studio page's History section too. Both keys live
+// in src/lang/*.xml; the anchor id stays "history" so existing links keep working.
 
 for( $i = 0; $i < count($histories); $i++ )
 {
@@ -647,11 +651,19 @@ if ($handle = opendir($game.'/images'))
 	/* This is the correct way to loop over the directory. */
 	while (false !== ($entry = readdir($handle)))
 	{
-		if( substr($entry,-4) == ".png" || substr($entry,-4) == ".gif" )
+		// LOCAL CHANGE: .jpg/.jpeg are accepted alongside upstream's .png/.gif.
+		// Steam screenshot exports are JPEG, and upstream dropped them silently,
+		// which is a trap. The capsules loop already accepts them for the same
+		// reason. images.zip is not matched here, so it stays a download only.
+		$ext = strtolower( pathinfo($entry, PATHINFO_EXTENSION) );
+		if( in_array($ext, array('png', 'gif', 'jpg', 'jpeg')) )
 		{
 			if( substr($entry,0,4) != "logo" && substr($entry,0,4) != "icon" && substr($entry,0,6) != "header" )
 			{	
-				echo '<div class="uk-width-medium-1-2"><a href="'. $game .'/images/'. $entry .'"><img src="'. $game .'/images/'.$entry.'" alt="'.$entry.'" /></a></div>';
+				// LOCAL CHANGE: three screenshots per row instead of upstream's two
+				// (1-3 rather than 1-2). The Masonry itemSelector near the end of this
+				// file lists both widths, so keep them in step if this changes again.
+				echo '<div class="uk-width-medium-1-3"><a href="'. $game .'/images/'. $entry .'"><img src="'. $game .'/images/'.$entry.'" alt="'.$entry.'" /></a></div>';
 				$found++;
 			}
 		}
@@ -903,7 +915,11 @@ echo '						</div>
 
 				container.imagesLoaded( function() {
 					container.masonry({
-						itemSelector: \'.uk-width-medium-1-2\',
+						// LOCAL CHANGE: both widths are listed because $(\'.images\') matches
+						// three grids at once. Screenshots are 1-3; Capsules and Logo & Icon
+						// keep upstream\'s 1-2. Dropping either width would leave that grid
+						// with no Masonry items, collapsing its container to zero height.
+						itemSelector: \'.uk-width-medium-1-2, .uk-width-medium-1-3\',
 					});
 				});
 			});

@@ -31,25 +31,31 @@
 		<!-- Steam applies its own regional conversions; USD is the reference price. -->
 		<price>
 			<currency>USD</currency>
-			<value>$5.00</value>
+			<value>$4.99</value>
 		</price>
 	</prices>
 
 	<description>
-		The best Idle RPG inspired by a dog named Ramon! Now, seriously, you play as a brown shih tzu called Ramon, and your goal is to find his friends, but that task will not be easy. First you need to get ready by gathering resources, unlocking the map, fighting monsters and being the best dog in the world!
+		The best Idle RPG inspired by a dog named Ramon of the World! But seriously, you play as a brown shih-tzu named Ramon, and your goal is to find your friends, but that won't be an easy task. First you need to get ready by gathering resources, unlocking the map, fighting monsters and taking their loot, and finally finding them all, proving that you are the best dog in the world!
 	</description>
 
-	<!-- Two paragraphs, each its own block with an empty <header>. The singular
-	     <history> field renders everything into one <p>, so paragraph breaks would
-	     be lost if both texts sat inside it. -->
+	<!-- One block per paragraph, each with an empty <header>: presskit() renders every
+	     <history> into its own <p>, and a line break inside a single <text> would
+	     collapse to a space. Victor's first paragraph ends on "examples:" and carries
+	     on below it, so it occupies two blocks (1 and 2) to keep that break on the
+	     page. Mirrors the structure of data-pt.xml. -->
 	<histories>
 		<history>
 			<header></header>
-			<text>It all started when I began looking at Ramon's life (my dog) and realised it was a lot like an RPG. Let me give you some examples. He has several toys and he plays differently depending on the toy, which could easily be adapted into weapons. He also has several little outfits (and he looks very cute wearing them, by the way), and those could be the armour. On top of that, he has a daily quest, where I have to take him out for a walk every day!</text>
+			<text>It all started when I looked at Ramon's life (my dog) and realized it was a lot like an RPG. Let me give you some examples:</text>
 		</history>
 		<history>
 			<header></header>
-			<text>Along with that, I always wanted him to be immortalised, since dogs unfortunately live shorter lives than we do :(. So the most obvious choice was to make a game inspired by him. And since I was watching "The Last of Us" at the time, I thought: what if I made "The Last Good Boy"? And then the next step was creating the story behind that name.</text>
+			<text>He has several toys and he plays differently depending on the toy, which could easily be turned into weapons. He also has several little outfits that we bought for the cold, which could be the armor. On top of that, he has a daily quest: taking him out for a walk every day!</text>
+		</history>
+		<history>
+			<header></header>
+			<text>Along with that, I always wanted him to be immortalized, since dogs unfortunately live shorter lives than we do :( So the most obvious choice was to make a game inspired by him. And since I was watching "The Last of Us" at the time, I thought: what if I made "The Last Good Boy"? And then the next step was creating the story behind that name.</text>
 		</history>
 	</histories>
 

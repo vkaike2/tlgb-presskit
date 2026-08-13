@@ -18,6 +18,12 @@
 			<base>History</base>
 			<local>História</local>
 		</translation>
+		<!-- LOCAL CHANGE: título só da página do jogo. O estúdio continua usando
+		     "História" acima, porque a seção dele fala do estúdio, não do jogo. -->
+		<translation>
+			<base>Why did I make this game?</base>
+			<local>Por que esse jogo existe?</local>
+		</translation>
 		<translation>
 			<base>Projects</base>
 			<local>Projetos</local>
