@@ -160,6 +160,18 @@
 			<local><![CDATA[There are currently no capsules available for %s. Check back later for more or <a href="#contact">contact us</a> for specific requests!]]></local>
 		</translation>
 		<translation>
+			<base>Ramon, the dog</base>
+			<local>Ramon, the dog</local>
+		</translation>
+		<translation>
+			<base>download photos of Ramon as .zip (%s)</base>
+			<local>download photos of Ramon as .zip (%s)</local>
+		</translation>
+		<translation>
+			<base><![CDATA[There are currently no photos of Ramon available. Check back later for more or <a href="#contact">contact us</a> for specific requests!]]></base>
+			<local><![CDATA[There are currently no photos of Ramon available. Check back later for more or <a href="#contact">contact us</a> for specific requests!]]></local>
+		</translation>
+		<translation>
 			<base>Elements</base>
 			<local>Elements</local>
 		</translation>

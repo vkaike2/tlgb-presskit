@@ -160,6 +160,18 @@
 			<local><![CDATA[No momento não há imagens da Steam disponíveis de %s. Volte mais tarde ou <a href="#contact">entre em contato</a> para pedidos específicos!]]></local>
 		</translation>
 		<translation>
+			<base>Ramon, the dog</base>
+			<local>Ramon, o cachorro</local>
+		</translation>
+		<translation>
+			<base>download photos of Ramon as .zip (%s)</base>
+			<local>baixar as fotos do Ramon em .zip (%s)</local>
+		</translation>
+		<translation>
+			<base><![CDATA[There are currently no photos of Ramon available. Check back later for more or <a href="#contact">contact us</a> for specific requests!]]></base>
+			<local><![CDATA[No momento não há fotos do Ramon disponíveis. Volte mais tarde ou <a href="#contact">entre em contato</a> para pedidos específicos!]]></local>
+		</translation>
+		<translation>
 			<base>Elements</base>
 			<local>Elementos</local>
 		</translation>

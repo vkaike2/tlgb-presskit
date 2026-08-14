@@ -437,6 +437,7 @@ echo '					<li><a href="#factsheet">'. tl('Factsheet') .'</a></li>
 						<li><a href="#trailers">'. tl('Videos') .'</a></li>
 						<li><a href="#images">'. tl('Images') .'</a></li>
 						<li><a href="#capsules">'. tl('Capsules') .'</a></li>
+						<li><a href="#ramon">'. tl('Ramon, the dog') .'</a></li>
 						<li><a href="#elements">'. tl('Elements') .'</a></li>
 						<li><a href="#logo">'. tl('Logo & Icon') .'</a></li>';
 if( $monetize >= 1) { echo '<li><a href="#monetize">'. tl('Monetization Permission') .'</a></li>'; }
@@ -683,6 +684,14 @@ if ($found == 0) {
 renderAssetSection('capsules', tl('Capsules'), $game .'/images/capsules', 'capsules.zip',
 	'download capsules as .zip (%s)',
 	tlHtml('There are currently no capsules available for %s. Check back later for more or <a href="#contact">contact us</a> for specific requests!', GAME_TITLE));
+
+// Photos of the real dog. Justified for the same reason as the elements: the
+// photos are a mix of portrait and landscape, and rows that fill the width read
+// better than a half-width grid full of gaps.
+renderAssetSection('ramon', tl('Ramon, the dog'), $game .'/images/ramon', 'ramon.zip',
+	'download photos of Ramon as .zip (%s)',
+	tlHtml('There are currently no photos of Ramon available. Check back later for more or <a href="#contact">contact us</a> for specific requests!'),
+	true);
 
 // Justified: these are many small parts at wildly different shapes, so pack them
 // into full-width rows rather than giving each a half-page cell.
