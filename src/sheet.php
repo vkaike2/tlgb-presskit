@@ -407,7 +407,10 @@ echo '<!DOCTYPE html>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<title>'. COMPANY_TITLE .'</title>
+		<!-- LOCAL CHANGE: upstream titles every game sheet after the company, so
+		     every tab reads the same. Name the tab after the game instead; the
+		     studio page in index.php keeps COMPANY_TITLE. -->
+		<title>'. GAME_TITLE .'</title>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/uikit/1.2.0/css/uikit.gradient.min.css" rel="stylesheet" type="text/css">
 		<link href="style.css" rel="stylesheet" type="text/css">
 	</head>
