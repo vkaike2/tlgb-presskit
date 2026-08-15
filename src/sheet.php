@@ -401,15 +401,15 @@ function parseLink($uri)
     return $parsed;
 }
 
+// LOCAL CHANGE: the title below is GAME_TITLE, not COMPANY_TITLE. Upstream
+// titles every game sheet after the company, so every tab reads the same; the
+// studio page in index.php keeps COMPANY_TITLE.
 echo '<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<!-- LOCAL CHANGE: upstream titles every game sheet after the company, so
-		     every tab reads the same. Name the tab after the game instead; the
-		     studio page in index.php keeps COMPANY_TITLE. -->
 		<title>'. GAME_TITLE .'</title>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/uikit/1.2.0/css/uikit.gradient.min.css" rel="stylesheet" type="text/css">
 		<link href="style.css" rel="stylesheet" type="text/css">
@@ -433,10 +433,12 @@ if (count(TranslateTool::getLanguages()) > 1) {
 	echo '<li class="uk-nav-divider"></li>';
 }
 		
+// LOCAL CHANGE: no #projects entry below. Upstream lists it on the game sheet
+// too, but only index.php renders a Projects section, so on a game page the
+// link points at an anchor that does not exist.
 echo '					<li><a href="#factsheet">'. tl('Factsheet') .'</a></li>
 						<li><a href="#description">'. tl('Description') .'</a></li>
 						<li><a href="#history">'. tl('Why did I make this game?') .'</a></li>
-						<li><a href="#projects">'. tl('Projects') .'</a></li>
 						<li><a href="#trailers">'. tl('Videos') .'</a></li>
 						<li><a href="#images">'. tl('Images') .'</a></li>
 						<li><a href="#capsules">'. tl('Capsules') .'</a></li>
