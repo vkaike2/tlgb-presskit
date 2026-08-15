@@ -100,6 +100,19 @@ function staticify(html) {
 		);
 }
 
+/**
+ * presskit() emits no favicon, so browser tabs fall back to a blank sheet.
+ * Add the tags ourselves; the images ride along in src/images, which we copy.
+ */
+function addFavicon(html) {
+	if (!html.includes('</head>') || html.includes('rel="icon"')) return html;
+	return html.replace(
+		'</head>',
+		'\t<link rel="icon" type="image/png" href="images/favicon.png">\n'
+		+ '\t\t<link rel="apple-touch-icon" href="images/apple-touch-icon.png">\n\t</head>',
+	);
+}
+
 /** Language codes come from the lang/<code>-<Name>.xml files presskit() scans. */
 async function findLanguages() {
 	const files = await fs.readdir(path.join(SRC, 'lang'));
@@ -127,7 +140,7 @@ async function fetchPage(url) {
 	// PHP renders errors into a 200 body, so inspect the HTML itself.
 	const bad = /<b>(Fatal error|Parse error|Warning)<\/b>|Uncaught \w*Error/.exec(html);
 	if (bad) throw new Error(`${url} rendered a PHP ${bad[1] ?? 'error'}:\n${html.slice(0, 800)}`);
-	return staticify(html);
+	return addFavicon(staticify(html));
 }
 
 async function waitForServer(base) {
